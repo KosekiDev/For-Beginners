@@ -1,6 +1,6 @@
 // Gives the n number of the fibonacci's suite
 
-pub fn fibonacci_memoization(n: usize) -> usize {
+pub fn fibonacci(n: usize) -> usize {
     if n < 2 {
         return n;
     }
@@ -20,24 +20,24 @@ pub fn fibonacci_memoization(n: usize) -> usize {
 
 #[test]
 fn should_return_0_for_the_first_number() {
-    assert_eq!(0, fibonacci_memoization(0));
+    assert_eq!(0, fibonacci(0));
 }
 #[test]
 fn should_return_1_for_the_second_number() {
-    assert_eq!(1, fibonacci_memoization(1));
+    assert_eq!(1, fibonacci(1));
 }
 
 #[test]
 fn should_return_1_for_the_third_number() {
-    assert_eq!(1, fibonacci_memoization(2));
+    assert_eq!(1, fibonacci(2));
 }
 
 #[test]
 fn should_return_2_for_the_fourth_number() {
-    assert_eq!(2, fibonacci_memoization(3));
+    assert_eq!(2, fibonacci(3));
 }
 
 #[test]
 fn should_return_34_for_the_tenth_number() {
-    assert_eq!(34, fibonacci_memoization(9));
+    assert_eq!(34, fibonacci(9));
 }
