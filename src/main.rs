@@ -3,6 +3,7 @@ mod can_sum_memoization;
 mod dichotomique;
 mod fibonacci;
 mod fizzbuzz;
+mod greatest_common_denominator;
 mod grid_traveler_memoization;
 
 use std::collections::HashMap;
@@ -12,6 +13,7 @@ use can_sum_memoization::*;
 use dichotomique::*;
 use fibonacci::*;
 use fizzbuzz::*;
+use greatest_common_denominator::*;
 use grid_traveler_memoization::*;
 
 fn main() {
@@ -30,4 +32,5 @@ fn main() {
         "Can sum       > {}",
         can_sum_memoization(23, &vec![10, 8, 4, 1, 32], &mut HashMap::new())
     );
+    println!("GCD           > {}", greatest_common_denominator(42, 28));
 }
