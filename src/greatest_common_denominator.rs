@@ -1,6 +1,6 @@
 // Calculates the greatest common denominator between two numbers
 
-pub fn greatest_common_denominator(a: isize, b: isize) -> isize {
+pub fn greatest_common_denominator(a: usize, b: usize) -> usize {
     if a == 0 || b == 0 {
         return 0;
     }
