@@ -29,25 +29,25 @@ pub fn can_sum_memoization(
 }
 
 #[test]
-fn should_be_return_true_when_value_found_in_array() {
+fn should_return_true_when_value_found_in_array() {
     assert_eq!(true, can_sum_memoization(7, &vec![7], &mut HashMap::new()));
 }
 #[test]
-fn should_be_return_true_when_can_sum_memoization_with_two_numbers() {
+fn should_return_true_when_can_sum_memoization_with_two_numbers() {
     assert_eq!(
         true,
         can_sum_memoization(7, &vec![3, 4], &mut HashMap::new())
     );
 }
 #[test]
-fn should_be_return_true_when_can_sum_memoization_with_three_numbers() {
+fn should_return_true_when_can_sum_memoization_with_three_numbers() {
     assert_eq!(
         true,
         can_sum_memoization(7, &vec![2, 1, 4], &mut HashMap::new())
     );
 }
 #[test]
-fn should_be_return_true_with_big_number() {
+fn should_return_true_with_big_number() {
     assert_eq!(
         true,
         can_sum_memoization(
@@ -55,5 +55,12 @@ fn should_be_return_true_with_big_number() {
             &vec![10, 3, 25, 88, 80, 1, 4, 200, 110, 80, 10],
             &mut HashMap::new()
         )
+    );
+}
+#[test]
+fn should_return_false() {
+    assert_eq!(
+        true,
+        can_sum_memoization(47, &vec![10, 3, 25], &mut HashMap::new())
     );
 }
