@@ -2,10 +2,6 @@ pub fn bubble_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Copy,
 {
-    if arr.len() == 1 {
-        return;
-    }
-
     for i in 0..arr.len() {
         for j in 0..(arr.len() - i - 1) {
             if arr[j] > arr[j + 1] {
