@@ -1,28 +1,19 @@
 pub fn bubble_sort<T>(arr: &mut [T])
 where
-    T: PartialOrd,
+    T: PartialOrd + Copy,
 {
-    if arr.len() < 2 {
+    if arr.len() == 1 {
         return;
     }
 
-    let mut last_index = arr.len() - 2;
-    let mut current_index: usize = 0;
-
-    loop {
-        while current_index <= last_index {
-            if arr[current_index] > arr[current_index + 1] {
-                arr.swap(current_index, current_index + 1);
+    for i in 0..arr.len() {
+        for j in 0..(arr.len() - i - 1) {
+            if arr[j] > arr[j + 1] {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp
             }
-
-            current_index += 1;
         }
-
-        current_index = 0;
-        last_index = match last_index.checked_sub(1) {
-            Some(val) => val,
-            None => break,
-        };
     }
 }
 
